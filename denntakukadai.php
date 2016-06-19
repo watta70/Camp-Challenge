@@ -59,6 +59,7 @@ if(is_numeric($pushed)){
         }
 
 
+
         //記号計算の結果、もしくは素のままの数字に対し最終的なボタン処理を実行
         if($pushed == "＝"){
             $log .=  $operator . $num . "＝" . $answer . "<br>";
