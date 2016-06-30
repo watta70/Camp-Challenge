@@ -37,17 +37,19 @@
  // echo $output;
 
 
- //８．保留　ファイルに自己紹介を書き出し、保存してください。
+ //８.ファイルに自己紹介を書き出し、保存してください。
+// $a=fopen('AAA.txt', 'a');
+// fwrite($a, 'im from Tokyo');
+// fclose($a);
 
 
 
 
-
- //９．保留　ファイルから自己紹介を読み出し、表示してください。
-
+ //９.ファイルから自己紹介を読み出し、表示してください。
 
 
- $file_txt = file_get_contents('testtest.txt');
+
+ $file_txt = file_get_contents('AAA.txt');
  echo $file_txt;
 
 
