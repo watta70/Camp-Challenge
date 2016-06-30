@@ -11,16 +11,16 @@ for($i=0;$i<10;$i++){
 }
 */
 
-//課題２保留　引数として数値を受け取り、その値が奇数か偶数か判別＆表示する処理を関数として制作し、適当な数値に対して奇数・偶数の判別を行ってください
+//課題２　引数として数値を受け取り、その値が奇数か偶数か判別＆表示する処理を関数として制作し、適当な数値に対して奇数・偶数の判別を行ってください
 
-/*
-function kansu($suchi){
-  if($suchi % 2 == 0){echo "この数値は偶数です";
-  }else{echo "この数値は奇数です";
-  }
-}
-kansu(2);
-*/
+
+// function kansu($suchi){
+//   if($suchi % 2 == 0){echo "この数値は偶数です";
+//   }else{echo "この数値は奇数です";
+//   }
+// }
+// kansu(1);
+
 
 /* 課題３　引き数が3つの関数を定義する。1つ目は適当な数値を、2つ目はデフォルト値が5の数値を、最後はデフォルト値がfalse(bool値)の
 $typeを引き数として定義する。1つ目の引き数に2つ目の引き数を掛ける計算をする関数を作成し、$typeがfalseの時はその値を表示、trueのときは
@@ -47,31 +47,36 @@ $typeを引き数として定義する。1つ目の引き数に2つ目の引き�
   show_usrdata($myid, "林");//一般会員
   show_usrdata($hisid, "添田", true);//管理者*/
 
-/*課題4:保留　課題1で定義した関数に追記する形として、戻り値　true(bool値)　を返却するように修正し、関数の
+
+/*課題4:　課題1で定義した関数に追記する形として、戻り値　true(bool値)　を返却するように修正し、関数の
 呼び出し側でtrueを受け取れたら「この処理は正しく実行できました」、そうでないなら「正しく実行できませんでした」と表示する */
-/*
-function my_profile(){
-	"私の名前は渡部です<br>";
-	"１９８９年９月１２日生まれです<br>";
-	"趣味は読書、スノボー、旅行などです。<br><br>";
-  return true;
 
-}
-if(my_profile() == true){
-  echo "この処理は正しく実行できました";
-}else{echo "正しく実行できませんでした";
-}
-*/
+// function my_profile(){
+// 	"私の名前は渡部です<br>";
+// 	"１９８９年９月１２日生まれです<br>";
+// 	"趣味は読書、スノボー、旅行などです。<br><br>";
+//   return true;
 
-//課題5:保留　戻り値としてある人物のid(数値),名前,生年月日、住所を返却し、受け取った後は全情報を表示する
+// }
+// if(my_profile() == true){
+//   echo "この処理は正しく実行できました";
+// }else{echo "正しく実行できませんでした";
+// }
+
+
+//課題5:　戻り値としてある人物のid(数値),名前,生年月日、住所を返却し、受け取った後は全情報を表示する
 // function i_d(){
 //     $suuchi = 555;
 //     $namae = 'moaya';
 //     $seinenn = 19890912;
 //     $jyusyo = 'ootaku';
+    
 //     return array ($suuchi,$namae,$seinenn,$jyusyo);
-//
+    
+
+
 // }
+
 // $jyoho = i_d();
 // foreach($jyoho as $value){
 // echo $value;
@@ -79,10 +84,44 @@ if(my_profile() == true){
 
 
 
-/*課題6:名前による検索プログラムを実装する。3人分のプロフィール(項目は課題5参照)をあらかじめ定義しておく。
+/*課題6:名前による検索プログラムを実装する。
+3人分のプロフィール(項目は課題5参照)をあらかじめ定義しておく。
 引き数にそれらのプロフィールと文字列をとり、戻り値は1人分のプロフィール情報を返却する。
 引き数の文字が名前に含まれる(部分一致)プロフィール情報(複数名合致する場合は最初のプロフィールとする)を戻り値として返却する。
 それ以降などは課題5と同じ扱いに */
+
+// $hasegawa = array('長谷川','1999.9.9','otaku');
+// $suzuki = array('鈴木','2000.2.2','setagaya');
+// $motoki = array('元木','1888.8.8','nerima');
+
+// function profiles($a){
+// global $hasegawa;
+// global $suzuki;
+// global $motoki;
+
+//   if($a == '長谷川') {
+//        return $hasegawa;
+    
+//   }elseif ($a == '鈴木') {
+//       return $suzuki;
+    
+  
+//   }elseif ($a == '元木') {
+    
+//       return $motoki;
+    
+//   }else{return '登録されている苗字を入力してください';
+// }
+// }
+
+
+// $b = profiles('鈴木');
+// foreach ($b as $value) {
+//   echo $value;
+//   echo " <br>";
+// }
+
+
 
 
 
@@ -118,40 +157,51 @@ if(my_profile() == true){
 // my_profile();
 
 //課題9:3人分のプロフィールについてIDと住所以外（名前,生年月日）を表示する処理を実行する。2重のforeachとcontinueを必ず用いること
+//課題10:課題9の処理のうち2人目まででforeachのループを抜けるようにする
 
-// $arr = array(1 =>'maoya',
-//              2 =>'生年月日:19890912',
-//              3 =>'ID:01',
-//
-//              );
-// $arr2 = array(1 =>'yuto',
-//               2 =>'生年月日:19890101',
-//               3 =>'ID:02'
-//              );
-// $arr3 = array(1 =>'kaneko',
-//               2 =>'生年月日:19890401',
-//               3 =>'ID:03'
-//              );
-//
-// $arr4 = array($arr,$arr2,$arr3);
-//
-//
-//     foreach($arr4 as $value) {
-//       foreach($value as $y => $value2)
-//          if($y == 3){
-//            continue;
-//            }
-//          elseif($y < 3)
-//            {echo $value2 ;
-//            echo "<br>";}
-//
-//
-//
-//
-//
-//      };
-//
-//
+$maoya = array(1 =>'maoya',
+             2 =>'生年月日:19890912',
+             3 =>'ID:01',
+             4 =>'大田区'
+
+             );
+$yuto = array(1 =>'yuto',
+              2 =>'生年月日:19890101',
+              3 =>'ID:02',
+              4=>'世田谷区'
+             );
+$kaneko = array(1 =>'kaneko',
+              2 =>'生年月日:19890401',
+              3 =>'ID:03',
+              4=>'練馬区'
+             );
+
+$kakunou = array($maoya,$yuto,$kaneko);
+
+
+    foreach($kakunou as $value) {
+      foreach($value as $y => $value2){
+          if($y >= 3){
+           continue;
+           }
+           //課題10
+           elseif ($value2 == 'kaneko') {
+          break 2;
+         }elseif($y < 3)
+           {echo $value2 ;
+           echo "<br>";
+         }
+           
+         }
+}
+
+
+
+
+     
+
+
+
 
 
 
