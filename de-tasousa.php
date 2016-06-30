@@ -31,6 +31,8 @@
 echo '前回のアクセス時刻は'.$lasttime.'です。';*/
 
 
+
+
 //４．３と同じ機能をセッションで作成してください。
 
 /*date_default_timezone_set('Asia/Tokyo');
@@ -43,25 +45,51 @@ session_start();
 
 
 //５．ファイルアップロード機能を作成してください。
-    ?>
-<!DOCTYPE html>
-    <head>
-    </head>
-    <body>
-        <form enctype="multipart/form-data" action="de-tasousa3.php" method="post">
-            ファイル選択：<input name="userfile" type="file" />
-            <input type="submit" name="btnSubmit">
-        </form>
-    </body>
-</html>
-<?php
 //６．５で作成したプログラムに、ファイルの中身を読み込んで表示する機能を追加してください。
+ ?>
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title></title>
+   <link rel="stylesheet" href="">
+ </head>
+ <body>
+   <form enctype="multipart/form-data" action="de-tasousa.php" method="post" accept-charset="utf-8">
+        ファイル選択:<input name="userfile" type="file" />
+        <input type="submit" value = 'アップロード'>
 
+   </form>
+   <?php
+   
 
+   $file_name = 'wawawa.txt';
+   if(is_uploaded_file($_FILES['userfile']['tmp_name'])){if(move_uploaded_file(
+      $_FILES['userfile']['tmp_name'], $file_name)){
+      echo $_FILES["userfile"]["name"] . "をアップロードしました。";
+      echo "<br>";
+      echo 'ファイルの内容: '.file_get_contents("$file_name");
 
+     }else{echo '移動失敗';
+   }}else{echo 'アップロードされていません。';
+     }
 
-
-
-
-
+     
+  
 ?>
+
+
+   
+ </body>
+ </html>
+
+
+
+
+
+
+
+
+
+
