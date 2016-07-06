@@ -68,9 +68,12 @@ session_start();
 
     種別:
     <br>
-    <input type="radio" name="type" value="エンジニア">エンジニア<br>
-    <input type="radio" name="type" value="営業">営業<br>
-    <input type="radio" name="type" value="その他">その他<br>
+    <input type="radio" name="type" value="エンジニア"<?php if($_SESSION['type']=='エンジニア'){
+            ?> checked="checked"<?php ;}?>>エンジニア<br>
+    <input type="radio" name="type" value="営業" <?php if($_SESSION['type']=='営業'){
+            ?> checked="checked"<?php ;}?>>営業<br>
+    <input type="radio" name="type" value="その他" <?php if($_SESSION['type']=='その他'){
+            ?> checked="checked"<?php ;}?>>その他<br>
     <br>
     
     電話番号:
@@ -80,7 +83,7 @@ session_start();
 
     自己紹介文
     <br>
-    <textarea name="comment" rows=10 cols=50 style="resize:none" wrap="hard" value="<?php echo $_SESSION['comment']; ?>"> </textarea><br><br>
+    <textarea name="comment" rows=10 cols=50 style="resize:none" wrap="hard"><?php echo $_SESSION['comment']; ?></textarea><br><br>
     
     <input type="submit" name="btnSubmit" value="確認画面へ"><br/><br/>
     
