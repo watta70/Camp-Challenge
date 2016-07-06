@@ -62,7 +62,7 @@ session_start();
 
    </form>
    <?php
-   
+
 
    $file_name = 'wawawa.txt';
    if(is_uploaded_file($_FILES['userfile']['tmp_name'])){if(move_uploaded_file(
@@ -75,8 +75,6 @@ session_start();
    }}else{echo 'アップロードされていません。';
      }
 
-     
-  
 ?>
 
 

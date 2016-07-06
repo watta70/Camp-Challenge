@@ -77,6 +77,8 @@ for($i=0; $i<102; $i++) {
               );
         var_dump($arr);
 */
+
+
 /*課題１０ 保留 クエリストリングを利用して、以下の処理を実現してください。
 
 　簡易素因数分解のロジックを作成します。
@@ -86,12 +88,27 @@ for($i=0; $i<102; $i++) {
 　
 　2ケタ以上の素数が含まれた数値の場合は、
 　「元の値　1ケタの素因数　その他」と表記して、その他　に含んでください */
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <form action="php-kiso2.php" method="get" accept-charset="utf-8">
+    素因数分解したい1桁の正数を入力:<input type="text" name="seisu">>
+    <input type="submit" value = '実行'>
 
+        
+    </form>
+</body>
+</html>
 
-
-
-
-
+<?php
+$seisu = $_GET['seisu'];
 
 
 
