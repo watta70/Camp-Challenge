@@ -25,7 +25,7 @@ function database($name,$birthday,$tell,$type,$comment){
 
     //クエリとして用意
     $insert_query = $insert_db->prepare($insert_sql);
-
+    //第一段階: 6
     //SQL文にセッションから受け取った値＆現在時をバインド
     $insert_query->bindValue(':name',$name);
     $insert_query->bindValue(':birthday',$birthday);
@@ -36,6 +36,11 @@ function database($name,$birthday,$tell,$type,$comment){
     
     //SQLを実行
     $insert_query->execute();
+
+
+    if (!issest($insert_query)) {
+    	echo 'データの挿入に失敗しました:[SQLのエラー文]';
+    }
     
     //接続オブジェクトを初期化することでDB接続を切断
     $insert_db=null;
